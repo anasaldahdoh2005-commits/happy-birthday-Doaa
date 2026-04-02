@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عيد ميلاد سعيد 🎉</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<audio id="music" src="music.mp3"></audio>
+
+<!-- الشاشة الأولى -->
+<div id="screen1" class="screen active">
+  <h1 class="title">🎉 عيد ميلاد سعيد 🎉</h1>
+  <div class="gift" onclick="openGift()">🎁</div>
+</div>
+
+<!-- الستارة (مخفية بالبداية) -->
+<div id="curtain-left" class="curtain"></div>
+<div id="curtain-right" class="curtain"></div>
+
+<!-- الشاشة الثانية -->
+<div id="screen2" class="screen">
+
+  <div class="content">
+
+    <h1 id="text"></h1>
+
+    <h2 class="name-glow">دعاء</h2>
+
+    <div class="gift-from">إهداء من أختك رجاء ❤️</div>
+
+    <div class="candles">🕯️ 🕯️ 🕯️</div>
+
+    <p class="message">
+      كل عام وأنتِ بألف خير 💙  
+      سنة مليئة بالسعادة والراحة  
+      الله يديم عليك الفرح ويحقق أمنياتك
+    </p>
+
+  </div>
+
+</div>
+<div id="hearts-container"></div>
+
+<canvas id="confetti"></canvas>
+<script src="js/script.js"></script>
+
+</body>
+</html>
