@@ -1,0 +1,143 @@
+body{
+  margin:0;
+  font-family:Tahoma;
+  background:#0b0b14;
+  color:white;
+  overflow:hidden;
+}
+
+/* الشاشات */
+.screen{
+  display:none;
+  height:100vh;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+}
+.screen.active{
+  display:flex;
+}
+
+/* البداية */
+.title{
+  font-size:32px;
+}
+
+.gift{
+  font-size:100px;
+  cursor:pointer;
+  animation:float 2s infinite;
+}
+
+@keyframes float{
+  50%{transform:translateY(-15px);}
+}
+
+/* الستارة */
+.curtain{
+  position:fixed;
+  top:0;
+  width:50%;
+  height:100%;
+  background:#000;
+  z-index:10;
+  transition:1s ease;
+  display:none; /* 🔥 مخفية بالبداية */
+}
+
+#curtain-left{ left:0; }
+#curtain-right{ right:0; }
+
+/* المحتوى */
+.content{
+  text-align:center;
+  max-width:350px;
+}
+
+/* التهنئة */
+#text{
+  font-size:36px;
+  font-weight:bold;
+}
+
+/* اسم دعاء */
+.name-glow{
+  font-size:38px;
+  margin:10px 0;
+  text-shadow:
+    0 0 10px #ff9ecb,
+    0 0 20px #ff69b4,
+    0 0 40px #ff69b4,
+    0 0 60px #ffd700;
+}
+.name-glow{
+  animation: glowPulse 2s infinite alternate;
+}
+
+@keyframes glowPulse{
+  from{ text-shadow: 0 0 10px #ff9ecb; }
+  to{ text-shadow: 0 0 25px #ff69b4, 0 0 60px #ffd700; }
+}
+
+/* الإهداء */
+.gift-from{
+  font-size:18px;
+}
+
+/* الشموع */
+.candles{
+  font-size:42px;
+}
+.candles{
+  font-size:42px;
+  animation: candle 1s infinite alternate;
+}
+
+@keyframes candle{
+  from{ transform:translateY(0); }
+  to{ transform:translateY(-3px); }
+}
+
+/* الرسالة */
+.message{
+  font-size:36px;
+  line-height:1.8;
+}
+
+/* confetti */
+#confetti{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+}
+/* القلوب */
+#hearts-container{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+.heart{
+  position:absolute;
+  bottom:-20px;
+  color:#ff6b9e;
+  animation:floatUp linear forwards;
+}
+
+@keyframes floatUp{
+  0%{
+    transform:translateY(0) scale(1);
+    opacity:1;
+  }
+  100%{
+    transform:translateY(-110vh) scale(1.5);
+    opacity:0;
+  }
+}
