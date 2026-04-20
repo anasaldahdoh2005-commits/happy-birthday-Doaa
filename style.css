@@ -92,6 +92,9 @@ body{
   font-size:42px;
   animation: candle 1s infinite alternate;
 }
+.DATE{
+  font-size:15px;
+}
 
 @keyframes candle{
   from{ transform:translateY(0); }
